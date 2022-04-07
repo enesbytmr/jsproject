@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "http": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15"
+  },
+  "name": "jsproject",
+  "description": "",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon script.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enesbytmr/jsproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enesbytmr/jsproject/issues"
+  },
+  "homepage": "https://github.com/enesbytmr/jsproject#readme"
+}
