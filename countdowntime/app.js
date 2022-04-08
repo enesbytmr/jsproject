@@ -71,6 +71,7 @@ let stopTimer = ()=>{
 //reset
 let resetTimer = () => {
     timer.innerHTML = '00:00:00'
+    stopTime = true
 
 }
 
