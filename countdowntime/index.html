@@ -7,62 +7,53 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  
 </head>
 <body class="bg-dark">
 <div class="container">
-<h1 class="d-flex justify-content-center m-3 text-light">Countown</h1>
+<h1 class="d-flex justify-content-center m-3 text-light">StopWatch</h1>
 
 
-<h2 class="d-flex justify-content-center m-3 text-light">00.00</h2>
+<h2 class="d-flex justify-content-center m-3 text-light" id="stopWatch">00.00.00</h2>
 <div class="row m-4">
     <div class="col-sm">
-        <button class="btn btn-light" id="StartButton">Start</button>
+        <button class="btn btn-light" id="startButton">Start</button>
       </div>
       <div class="col-sm">
-        <button class="btn btn-light">Stop</button>
+        <button class="btn btn-light" id="stopButton">Stop</button>
       </div>
       <div class="col-sm">
-        <button class="btn btn-light">Reset</button>
+        <button class="btn btn-light" id="resetButton">Reset</button>
       </div>
       <div class="col-sm">
-        <button class="btn btn-light">Lap</button>
+        <button class="btn btn-light" id="lapButton">Lap</button>
       </div>
 </div>
-<div class="container">
+<!-- <!-- <div class="container"> -->
     <table class="table table-dark">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            
             <th scope="col">Lap </th>
             <th scope="col">Lap time</th>
         
           </tr>
         </thead>
-        <tbody id="add Table ">
-          <tr>
+        <tbody id="addTable">
+          <!-- <tr>
             <th scope="row">1</th>
-            <td>Lap 1</td>
-            <td>0.00</td>
+            <td>Lap </td>
+            <td></td>
             
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Lap2</td>
-            <td>0.0</td>
-
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>0.00</td>
-
-          </tr>
+          </tr> -->
+       
         </tbody>
       </table>
 
-</div>
+</div> -->
 
 
-</div>
 
+<script src="app.js"></script>
 </body>
 </html>
