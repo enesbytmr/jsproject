@@ -6,11 +6,11 @@ const bodyParser = require("body-parser");
 const fs = require("fs")
 
 //  Index.Html variable
-const countDownPage = fs.open('./countdowntime/index.html',(err,data)=>{
+const countDownPage = fs.opendir('./countdowntime/','utf-8',(err,data)=>{
   if(err){
     console.log(err)
   }else{
-    return data.toString();
+    console.log( data.toString())
 
   }
 })
