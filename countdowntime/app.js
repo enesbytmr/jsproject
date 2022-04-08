@@ -10,13 +10,56 @@ const addTable = document.getElementById('addTable')
 
 //stopwatch requirements
 
-let sec = 00
-let min = 00
-let hr  = 00
+
 let stopTime = true;
 let count =0 ;
-let timerCycle = ()=> {
+let sec = 0
+let min =0
+let hr = 0
+
+
+
+// start 
+let startTimer = () =>{
+
+    if(stopTime == true){
+        stopTime = false ;
+        timerCycle();
+    }
+}
+
+// stop
+let stopTimer = ()=>{
+    if(stopTime == false){
+        stopTime = true;
+    }
+}
+
+//reset
+let resetTimer = () => {
+    sec= 0 
+min = 0 
+hr = 0 
+    timer.innerHTML = '00:00:00'
+    stopTime = true
+
+}
+
+
+// Lap
+//table => add table elements 
+
+let counter = ()=>{
+    count += 1
+}
+let lapNumber = lapButton.addEventListener('click',counter)
+let lapTime =() => {
+   let lapNow = `<tr><th scope="row">Lap ${count}</th><td>${hr} : ${min} : ${sec} </td><td></td></tr>`;
+    addTable.innerHTML += lapNow;
+  }
+  let timerCycle = ()=> {
     if (stopTime == false) {
+        
         sec = parseInt(sec);
         min = parseInt(min);
         hr = parseInt(hr);
@@ -49,44 +92,6 @@ let timerCycle = ()=> {
       }
     }
 
-
-
-
-
-// start 
-let startTimer = () =>{
-    if(stopTime == true){
-        stopTime = false ;
-        timerCycle();
-    }
-}
-
-// stop
-let stopTimer = ()=>{
-    if(stopTime == false){
-        stopTime = true;
-    }
-}
-
-//reset
-let resetTimer = () => {
-    timer.innerHTML = '00:00:00'
-    stopTime = true
-
-}
-
-
-// Lap
-//table => add table elements 
-
-let counter = ()=>{
-    count += 1
-}
-let lapNumber = lapButton.addEventListener('click',counter)
-let lapTime =() => {
-   let lapNow = `<tr><th scope="row">Lap ${count}</th><td>${hr} : ${min} : ${sec} </td><td></td></tr>`;
-    addTable.innerHTML += lapNow;
-  }
 
 
 
