@@ -35,6 +35,7 @@ let resetTimer = () => {
   min = 00;
   hr = 00;
   timer.innerHTML = "00:00:00";
+  addTable.innerHTML =""
   stopTime = true;
 };
 
