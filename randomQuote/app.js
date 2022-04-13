@@ -29,7 +29,7 @@ const dom1= new JSDOM(content)
 
 //server up
 const app = express()
-const port = 3000
+const port = 300
 
 app.get('/', (req, res) => {
   res.send(contentStr)
