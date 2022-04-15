@@ -15,24 +15,26 @@ const fs = require('fs')
 const http = require('http')
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
-const html = fs.readFile('index.html', function(err, data) {
-  if(err){
-    console.log(err)
-  }else{
-     contentStr = data.toString();
-     content = data;
-  }
- });
-
+// const html = fs.readFile('index.html', function(err, data) {
+//   if(err){
+//     console.log(err)
+//   }else{
+//      contentStr = data.toString();
+//      content = data;
+//   }
+//  });
+let content;
 const dom = new JSDOM(contentStr);
-const dom1= new JSDOM(content)
 
+const deneme = JSDOM.fromFile("index.html", 'text/html').then(dom => {
+  let content = (dom.serialize());
+});
 //server up
 const app = express()
 const port = 300
 
 app.get('/', (req, res) => {
-  res.send(contentStr)
+  res.send(content)
 })
 
 app.listen(3000, () => {
@@ -41,12 +43,12 @@ app.listen(3000, () => {
 
 //define quote author btn
 //quote author btn 
-const document = dom1.window.document;
+const document = dom.window.document;
 const author= document.querySelector('#author')
 const quote = document.querySelector('#quote')
 const btn = document.querySelector('#btn')
 
-console.log(author)
+
 //  
 //talking with api 
 
