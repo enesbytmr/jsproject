@@ -1,4 +1,13 @@
-//PSEUDO
+// //PSEUDO
+// kullanici ilk basta rastgele bir quote gorur
+// generate qutote bastiginda yenisi gelir
+
+// api ile baglanti 
+// apiden gelen ilk quote kullaniciya gosterilir (DOM)
+
+// fs axios jsdom express
+
+//plans
 // axios talk with api 
 // sent api req random quote
 // get api responce random quote
@@ -8,7 +17,7 @@
 
 
 //add sources axios express fs http 
-let contentStr;
+
 const axios = require('axios')
 const express = require('express')
 const fs = require('fs')
@@ -41,11 +50,12 @@ app.listen(3000, () => {
 })
 
 //define quote author btn
-//quote author btn 
-const document = dom.window.document;
-const author= document.querySelector('#author')
-const quote = document.querySelector('#quote')
-const btn = document.querySelector('#btn')
+//calismiyor !!
+// const document = dom.window.document;
+// const author= document.querySelector('#author')
+// const quote = document.querySelector('#quote')
+// const btn = document.querySelector('#btn')
+
 
 
 //  
@@ -53,7 +63,3 @@ const btn = document.querySelector('#btn')
 
 
 
-
-//dom 
-
-//
