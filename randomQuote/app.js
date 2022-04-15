@@ -8,7 +8,7 @@
 
 
 //add sources axios express fs http 
-let contentStr,content;
+let contentStr;
 const axios = require('axios')
 const express = require('express')
 const fs = require('fs')
@@ -22,12 +22,11 @@ const { JSDOM } = jsdom;
 //      contentStr = data.toString();
 //      content = data;
 //   }
-//  });
-let content;
-const dom = new JSDOM(contentStr);
+let content
+const dom = new JSDOM();
 
 const deneme = JSDOM.fromFile("index.html", 'text/html').then(dom => {
-  let content = (dom.serialize());
+   content= (dom.serialize());
 });
 //server up
 const app = express()
